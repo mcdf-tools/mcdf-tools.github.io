@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCDF</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/common.js"></script>
+    <script src="./script.js"></script>
+
+    <!-- Fav Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <nav>
+        <div class="nav-img">
+            <a href="/"><img src="/img/logo.png" alt="Minecraft Discontinued Features Logo"></a>
+        </div>
+        <H1>Minecraft Discontinued Features</H1>
+        <div class="nav-links">
+            <a href="https://discord.gg/n7v7pgE"><img src="/img/discord.png" alt="Discord Logo"></a>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="widget-ui-container">
+            <div id="tooltip" style="display: none;"></div>
+            <div class="widget-column" id="ui">
+                <div class="widget">
+                    <h2>Comparator Signal Strength Calculator</h2>
+                    <form action="javascript:;" onsubmit="calculate(this)">
+                        <div class="widget-section">
+                            <label for="signal-strength">Signal Strength</label><input type="number" min="0" max="1779" name="signal-strength" id="signal-strength"><button type="button" class="tooltip-button" onclick="showTooltip(this, 'Signal strength read from a comparator');">?</button>
+                        </div>
+                        <div class="widget-section">
+                            <label for="container">Container</label><select name="container" id="container">
+                                <option value="minecraft:barrel">Barrel</option>
+                                <option value="minecraft:blast_furnace">Blast Furnace</option>
+                                <option value="minecraft:brewing_stand">Brewing Stand</option>
+                                <option value="minecraft:chest">Chest</option>
+                                <option value="minecraft:dispenser">Dispenser</option>
+                                <option value="minecraft:dropper">Dropper</option>
+                                <option value="minecraft:furnace">Furnace</option>
+                                <option value="minecraft:hopper">Hopper</option>
+                                <option value="minecraft:shulker_box">Shulker Box</option>
+                                <option value="minecraft:smoker">Smoker</option>
+                                <option value="minecraft:trapped_chest">Trapped Chest</option>
+                            </select>
+                        </div>
+                        <div class="widget-section"><label for="old-version">Pre 1.13 Command Syntax</label><input id="old-version" name="old-version" type="checkbox"><button type="button" class="tooltip-button" onclick="showTooltip(this, 'Use syntax from before the <a class=external-link target=_blank href=https://minecraft.fandom.com/wiki/Java_Edition_1.13/Flattening#Commands>1.13 flattening</a>');">?</button></div>
+                        <div class="widget-section"><label for="127-stack">Use 127 Stacks</label><input id="127-stack" name="127-stack" type="checkbox"><button type="button" class="tooltip-button" onclick="showTooltip(this, 'Use <a class=external-link target=_blank href=https://mcdf.wiki.gg/wiki/Java_Edition:Overstacked_Items>overstacks</a> up to 127, up to 64 otherwise');">?</button></div>
+                        <div class="widget-section"><button type="submit" name="submit">Calculate</button></div>
+                        <div id="result" style="display: block;">
+                            <div class="widget-section">
+                                <table>
+                                    <tr>
+                                        <td><h3>Stackable: </h3></td>
+                                        <td><span id="stackable"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><h3>Non-Stackable: </h3></td>
+                                        <td><span id="non-stackable"></span></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="widget-section">
+                                <h3>Give Command</h3>
+                                <textarea id="give-command" readonly></textarea>
+                            </div>
+                            <div class="widget-section">
+                                <h3>Setblock Command</h3>
+                                <textarea id="setblock-command" readonly></textarea>
+                            </div>
+                        </div>
+                        <div id="error">
+                            <div class="widget-section">
+                                <h3 id="error-msg" style="color: red;"></h3>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="widget-column" id="links">
+                <div class="widget">
+                    <h2>Other Tools</h2>
+                    <a class="widget-section" href="/tool/comparator-strength-calculator"><h3>Comparator Strength Calculator</h3></a>
+                    <a class="widget-section" href="/tool/23w13a-or-b-command-generator"><h3>23w13a or b Command Generator</h3></a>
+                    <a class="widget-section" href="/tool/generic-item-block-generator"><h3>Generic Item Block Generator</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Tool Created By: <a class="external-link" target="_blank" href="https://mcdf.wiki.gg/wiki/User:Bayugoon">Bayugoon</a></p>
+        <p><a class="external-link" target="_blank" href="https://github.com/Minecraft-Discontinued-Features/minecraft-discontinued-features.github.io">Github Repository</a></p>
+        <p>Not Approved By or Associated With Mojang Studios or Microsoft.</p>
+    </footer>
+</body>
+</html>

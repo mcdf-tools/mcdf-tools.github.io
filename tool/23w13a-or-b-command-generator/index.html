@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCDF</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/common.js"></script>
+
+    <!-- Fav Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <nav>
+        <div class="nav-img">
+            <a href="/"><img src="/img/logo.png" alt="Minecraft Discontinued Features Logo"></a>
+        </div>
+        <H1>Minecraft Discontinued Features</H1>
+        <div class="nav-links">
+            <a href="https://discord.gg/n7v7pgE"><img src="/img/discord.png" alt="Discord Logo"></a>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <div class="widget-ui-container">
+            <div id="tooltip" style="display: none;"></div>
+            <div class="widget-column" id="ui">
+                <div class="widget">
+                    <h2>23w13a or b Command Generator [WIP]</h2>
+                    <form action="javascript:;" onsubmit="generate(this)">
+                        <div class="widget-section">
+                            <label for="vote-rule">Vote Rule</label><select id="vote-rule" name="vote-rule" onchange="updateForm()"><option value="">unset</option></select><button type="button" class="tooltip-button" onclick="showTooltip(this, 'Rule to approve or repeal');">?</button>
+                        </div>
+                        <div id="custom-form"><div></div></div>
+                        <div class="widget-section"><button type="submit" name="submit">Generate</button></div>
+                    </form>
+                    <div class="widget-section">
+                        <h3>Command</h3>
+                        <textarea id="command" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="widget-column" id="links">
+                <div class="widget">
+                    <h2>Other Tools</h2>
+                    <a class="widget-section" href="/tool/comparator-strength-calculator"><h3>Comparator Strength Calculator</h3></a>
+                    <a class="widget-section" href="/tool/23w13a-or-b-command-generator"><h3>23w13a or b Command Generator</h3></a>
+                    <a class="widget-section" href="/tool/generic-item-block-generator"><h3>Generic Item Block Generator</h3></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <footer>
+        <p>Tool Created By: <a class="external-link" target="_blank" href="https://mcdf.wiki.gg/wiki/User:Bayugoon">Bayugoon</a></p>
+        <p><a class="external-link" target="_blank" href="https://github.com/Minecraft-Discontinued-Features/minecraft-discontinued-features.github.io">Github Repository</a></p>
+        <p>Not Approved By or Associated With Mojang Studios or Microsoft.</p>
+    </footer>
+</body>
+</html>
