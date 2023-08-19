@@ -1,5 +1,5 @@
-//const base_url = 'https://minecraft-discontinued-features.github.io';
-const base_url = 'http://localhost:9000';
+const base_url = 'https://minecraft-discontinued-features.github.io';
+//const base_url = 'http://localhost:9000';
 
 let showingTooltip = false;
 
