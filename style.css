@@ -169,6 +169,13 @@ td h3 {
         grid-template-areas: ". ui . links .";
     }
 
+    .widget-single-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". ui .";
+    }
+
     #ui {
         grid-area: ui;
     }
