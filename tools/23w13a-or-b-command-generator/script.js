@@ -1,4 +1,4 @@
-const tool_url = base_url+"/tool/23w13a-or-b-command-generator";
+const tool_url = base_url+"/tools/23w13a-or-b-command-generator";
 
 const vote_rules_url = tool_url+'/vote_rules.json';
 const registries_url = tool_url+"/registries.json";

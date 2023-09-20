@@ -1,4 +1,4 @@
-const tool_url = base_url+"/tool/generic-item-block-generator";
+const tool_url = base_url+"/tools/generic-item-block-generator";
 const items_url = tool_url+"/items.json";
 
 const item_option = document.getElementById("item");
