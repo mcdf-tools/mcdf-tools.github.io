@@ -20,7 +20,7 @@ async function getJson(url) {
     });
 }
 
-async function initalize() {
+async function initialize() {
     vote_rules = await getJson(vote_rules_url);
     for(key in vote_rules) {
         let selection = document.createElement("option");
@@ -33,7 +33,7 @@ async function initalize() {
     lists = await getJson(lists_url);
 }
 
-initalize();
+initialize();
 
 function createSelect(array, id) {
     let select = document.createElement("select");

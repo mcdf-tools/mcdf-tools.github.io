@@ -33,6 +33,20 @@
             <div class="widget-column" id="ui">
                 <div class="widget">
                     <h2>Version Comparer [WIP]</h2>
+                    <div class="widget-section">
+                        <label for="versionA">Version A</label><select name="versionA" id="versionA" onchange="compare()">
+                            <option value="">-unset-</option>
+                        </select><input type="text" id="filterA" onkeyup="filter(VA, FA)" placeholder="filter">
+                    </div>
+                    <div class="widget-section">
+                        <label for="versionB">Version B</label><select name="versionB" id="versionB" onchange="compare()">
+                            <option value="">-unset-</option>
+                        </select><input type="text" id="filterB" onkeyup="filter(VB, FB)" placeholder="filter">
+                    </div>
+                    <div class="widget-section">
+                        <h3>Version information</h3>
+                        <textarea id="version-information" readonly></textarea>
+                    </div>
                 </div>
             </div>
             <div class="widget-column" id="links">

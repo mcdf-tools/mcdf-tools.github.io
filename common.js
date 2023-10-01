@@ -56,3 +56,25 @@ async function getJson(url) {
         .catch(err => { throw err });
     });
 }
+
+function filter(selector, filter) {
+    let filter_str = filter.value.toLowerCase().replace(" ", "_");
+    let options = selector.getElementsByTagName("option");
+    for(let i = 0; i < options.length; i++) {
+        let value = options[i].textContent;
+        if(value.indexOf(filter_str) > -1) {
+            options[i].style.display = "";
+        } else {
+            options[i].style.display = "none";
+        }
+    }
+}
+
+function resourceSelect(selector, resource_keys) {
+    for(key in resource_keys) {
+        let selection = document.createElement("option");
+        selection.setAttribute("value", key);
+        selection.appendChild(document.createTextNode(key));
+        selector.appendChild(selection);
+    }
+}
