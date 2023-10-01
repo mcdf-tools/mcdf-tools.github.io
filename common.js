@@ -1,6 +1,9 @@
 const base_url = 'https://mcdf-tools.github.io';
 //const base_url = 'http://localhost:9000';
 
+const mcw_url = 'https://minecraft.wiki/w';
+const mcdf_url = 'https://mcdf.wiki.gg/wiki';
+
 let showingTooltip = false;
 
 function showTooltip(element, msg) {
